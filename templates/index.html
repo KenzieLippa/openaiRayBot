@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Open AI Ray bot
+    </title>
+    <link
+    rel = "shortcut icon"
+    href = "{{url_for('static', filename='IMG_2037.png')}}"
+    />
+    <link 
+    rel = "stylesheet"
+    href = "{{url_for('static', filename = 'main.css')}}"/>
+
+</head>
+
+<body>
+    <img src="{{url_for('static', filename = 'IMG_2037.png')}} " class = "icon"/>
+    <h3>Ask me a Question</h3>
+    <form action="/" method="post">
+        <input type="text" name = "ray" placeholder="Enter a Question" required />
+        <input type="submit" value="Generate Answer"/>
+    </form>
+    <!--{ % if result % }-->
+    <div class = "result">{{result}}</div>
+    <!--{ % endif % }-->
+
+</body>
